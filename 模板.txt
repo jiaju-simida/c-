@@ -1,0 +1,42 @@
+*为什么要templates
+	&需要多个列表
+		1.有相同的代码
+		2.不同的类型
+	&重用代码
+		类型作为参数
+	&函数模板
+		声明：
+		-template<class T>(可以有多个参数,也可以有其他类型的参数)
+		-void XXX(T&x,T&y){}
+			-template下面是函数就是函数模板，是类就是类模板
+		使用：
+		-XXX(x,y);
+		注意：
+		-参数不能是俩个不同的类型
+		使用多个类型：
+			声明：
+			-void foo(void){}
+			定义：
+			foo<int>();
+			foo<float>();
+	&类模板
+		声明：
+		template<class T>
+		class Vector{
+		public
+			Vector(int);
+			~Vector();
+			Vector(const Vector&);
+			Vector& operator=(const Vector);
+			T& operator[](int);
+		private:
+			T* m_elements;
+			int m_size;
+		}
+		使用：
+		Vector<int> v1(100);
+		Vector<Complex>v2(256);
+		v1[20]=10;
+		v2[20]=v1[20];
+
+	&模板没有继承

@@ -1,0 +1,26 @@
+*静态对象
+	&static in c++
+		1.不对全局*(）开放
+		2.特殊访问属性
+	&static to objects
+		1.标志初始化
+		2.构造只发生一次
+		3.
+	&global objects
+		1.构造只做一次
+		2.在main之前
+
+*静态成员
+	&static members
+		1.hidden
+		2.persistent
+		3.在一个类下的所有对象都保持一致
+		4.多做一件事如
+			int A::i;(定义一遍）
+		5.只能在自己定义的地方初始化
+		6.可以同过类（A::i）访问（如果是public)
+	&static function
+		1. a.function()或A::function()
+		2.动态变量不能再静态函数中被访问，也不能用this
+		
+		
